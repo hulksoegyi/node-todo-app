@@ -16,7 +16,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client)=>{
     const db = client.db('TodoApp')
 
     // db.collection('Todos').insertOne({
-    //     text: "Something to do",
+    //     text: "Eat Lunch",
     //     completed: false,
     // }, (err, result) => {
     //     if(err){
@@ -26,9 +26,9 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client)=>{
     // });
 
     // db.collection('Users').insertOne({
-    //     name: "SOE NAING HTET",
+    //     name: "NANDAR AUNG THAN",
     //     age: 28,
-    //     location: "SINGAPORE",
+    //     location: "YANGON",
     // }, (err, result) => {
     //     if(err){
     //         return console.log(`Unable to insert`, err);

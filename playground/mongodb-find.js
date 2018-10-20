@@ -32,7 +32,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client)=>{
     // });
 
     db.collection('Users').find({
-        name: { '$ne': 'Mike' },
+        name: { '$ne': 'SOE NAING HTET' },
     })
     .toArray().then((docs) => {
         console.log(`Total Users : ${docs.length}`);

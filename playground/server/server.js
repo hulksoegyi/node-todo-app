@@ -10,6 +10,7 @@ var port = process.env.port || 3000;
 
 app.use(bodyParser.json());
 
+// Save into db
 app.post('/todos', (req, res) => {
     var todo = new Todo({
       text: req.body.text  
@@ -22,9 +23,22 @@ app.post('/todos', (req, res) => {
     });
 });
 
+// Select from db
+app.get('/todos', (req, res)=>{
+    Todo.find().then((todos) => {
+        res.send({todos});
+    }, (e)=>{
+        res.status(400).send(`Can't fetch records due to error : ${e}`);
+    });
+});
+
 // Get /todos/123213123
 
 
 app.listen(port, ()=>{
     console.log(`Server is up and running on port ${port}`);
 });
+
+module.exports = {
+    appp : app
+}
